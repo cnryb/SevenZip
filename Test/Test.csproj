@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F66D86F0-A7D7-4EA7-B389-C3B37010D276}</ProjectGuid>
+    <ProjectGuid>{5E1ED3FF-84E0-4E7B-9AD5-03D5F4B7AF13}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SevenZip</RootNamespace>
-    <AssemblyName>SevenZip</AssemblyName>
+    <RootNamespace>Test</RootNamespace>
+    <AssemblyName>Test</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,15 +23,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -43,29 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\CommandLineParser.cs" />
-    <Compile Include="Common\CRC.cs" />
-    <Compile Include="Common\InBuffer.cs" />
-    <Compile Include="Common\OutBuffer.cs" />
-    <Compile Include="Compress\LzmaAlone\LzmaAlone.cs" />
-    <Compile Include="Compress\LzmaAlone\LzmaBench.cs" />
-    <Compile Include="Compress\LzmaAlone\Properties\AssemblyInfo.cs" />
-    <Compile Include="Compress\LzmaAlone\Properties\Resources.cs" />
-    <Compile Include="Compress\LzmaAlone\Properties\Settings.cs" />
-    <Compile Include="Compress\LZMA\LzmaBase.cs" />
-    <Compile Include="Compress\LZMA\LzmaDecoder.cs" />
-    <Compile Include="Compress\LZMA\LzmaEncoder.cs" />
-    <Compile Include="Compress\LZ\IMatchFinder.cs" />
-    <Compile Include="Compress\LZ\LzBinTree.cs" />
-    <Compile Include="Compress\LZ\LzInWindow.cs" />
-    <Compile Include="Compress\LZ\LzOutWindow.cs" />
-    <Compile Include="Compress\RangeCoder\RangeCoder.cs" />
-    <Compile Include="Compress\RangeCoder\RangeCoderBit.cs" />
-    <Compile Include="Compress\RangeCoder\RangeCoderBitTree.cs" />
-    <Compile Include="ICoder.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
