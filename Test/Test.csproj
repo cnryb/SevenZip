@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SevenZip\SevenZip.csproj">
+      <Project>{f66d86f0-a7d7-4ea7-b389-c3b37010d276}</Project>
+      <Name>SevenZip</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
